@@ -15,8 +15,14 @@ public class Krestik_Nolik {
     //ПОЛЕ
     public static final int RYD = 3, STOLB = 3;
     public static String[][] field = new String[RYD][STOLB];
-
-
+    //РИСУЕМ ПОЛЕ
     public void game() {
+        for (int i = 0; i < 3; i++) {
+            System.out.println();
+            for (int j = 0; j < 3; j++) {
+                field[i][j] = ("[]");
+                System.out.print(field[i][j]);
+            }
+        }
     }
 }

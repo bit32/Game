@@ -18,7 +18,7 @@ public class Krestik_Nolik {
     public static final int GAMA_OVER_POBEDA_NOLIKA = 3;
     //FIELD
     public static final int RYD = 3, STOLB = 3;
-    public static String[][] field = new String[RYD][STOLB];
+    public static String [][] field = new String[RYD][STOLB];
     //INPUT SHAPE
     public static Scanner in = new Scanner(System.in);
     //DRAW FIELD
@@ -26,7 +26,7 @@ public class Krestik_Nolik {
         for (int i = 0; i < 3; i++) {
             System.out.println();
             for (int j = 0; j < 3; j++) {
-                field[i][j] = "[ ]";
+                field[i][j]= "[]";
                 System.out.print(field[i][j]);
             }
         }

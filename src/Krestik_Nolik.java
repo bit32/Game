@@ -31,13 +31,14 @@ public class Krestik_Nolik {
 
         }while(done == ' ');
 
-        if(done == 'X') System.out.println("Поздравляем! Вы победили!");
+        if(done == 'X') System.out.println("to win!");
 
-        else System.out.println("К сожалению, Вы проиграли!");
+        else System.out.println("the game is over");
 
         return;
 
     }
+    // initialization
 
    public static void init_matrix()
     {
@@ -54,7 +55,7 @@ public class Krestik_Nolik {
         }
     }
 
-
+//draw a field
     public static void disp_matrix()
     {
         int i;
@@ -80,13 +81,13 @@ public class Krestik_Nolik {
 
         System.out.println();
     }
-
+  //player move
     public static void get_player_move()
     {
 
         int i, j;
 
-        System.out.println("Введите координаты x, y: ");
+        System.out.println("Enter the coordinates x, y: ");
 
         i = s.nextInt();
         j = s.nextInt();
@@ -94,7 +95,7 @@ public class Krestik_Nolik {
         i--; j--;
 
         if(field[i][j] != ' '){
-            System.out.println("Неверный ход. Попробуйте еще раз!\n");
+            System.out.println("Try again!\n");
 
             get_player_move();
         }
@@ -102,7 +103,7 @@ public class Krestik_Nolik {
         else field[i][j] = 'X';
     }
 
-
+  //computer move
     public static void get_computer_move()
     {
 
@@ -119,14 +120,14 @@ public class Krestik_Nolik {
         }
 
         if(i*j == 9){
-            System.out.println("Ничья!");
+            System.out.println("drawn game!");
             System.exit(0);
         }
 
         else field[i][j] = 'O';
     }
 
-
+   //validate
     public static char check()
     {
         int i;

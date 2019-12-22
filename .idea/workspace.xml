@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8358f813-28d0-4daf-ac21-7c23023ab353" name="Default" comment="0.7-2">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/xo_xo/Game.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Game.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/xo_xo/Krestik_Nolik.class" afterPath="$PROJECT_DIR$/out/production/xo_xo/Krestik_Nolik.class" />
+    <list default="true" id="8358f813-28d0-4daf-ac21-7c23023ab353" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Krestik_Nolik.java" afterPath="$PROJECT_DIR$/src/Krestik_Nolik.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/XO.java" afterPath="$PROJECT_DIR$/src/XO.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,7 +30,7 @@
       <file leaf-file-name="Krestik_Nolik.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Krestik_Nolik.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-963">
+            <state relative-caret-position="-207">
               <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding />
             </state>
@@ -705,7 +700,7 @@
       <workItem from="1576694160146" duration="2638000" />
       <workItem from="1576788181636" duration="1154000" />
       <workItem from="1576958943340" duration="4119000" />
-      <workItem from="1577011826927" duration="2040000" />
+      <workItem from="1577011826927" duration="2298000" />
     </task>
     <task id="LOCAL-00001" summary="0.7-1">
       <created>1575749181182</created>
@@ -728,11 +723,18 @@
       <option name="project" value="LOCAL" />
       <updated>1575840031612</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="0.7-3">
+      <created>1577013911755</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1577013911755</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84117000" />
+    <option name="totallyTimeSpent" value="84375000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1025,7 +1027,7 @@
     <entry file="file://$PROJECT_DIR$/src/Main.java" />
     <entry file="file://$PROJECT_DIR$/src/Krestik_Nolik.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-963">
+        <state relative-caret-position="-207">
           <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding />
         </state>

@@ -1,37 +1,168 @@
-
-
 import java.util.Scanner;
 
-/**
- * Created by ВАСЯ on 24.11.2019.
- */
 public class Krestik_Nolik {
-    //SHAPE CONSTANTS
-    public static final int DIMENSION = 3;
-    public static final int PUSTO = 0;
-    public static final int KHRESTYK = 1;
-    public static final int NOLYK = 2;
-    //CURRENT POSITION CONSTANTS
-    public static final int GAMA_PRODOLGENIE = 0;
-    public static final int GAMA_OVER_NICHIY = 1;
-    public static final int GAMA_OVER_POBEDA_KRESTIKA = 2;
-    public static final int GAMA_OVER_POBEDA_NOLIKA = 3;
-    //FIELD
-    public static final int RYD = 3, STOLB = 3;
-    public static String [][] field = new String[RYD][STOLB];
-    //INPUT SHAPE
-    public static Scanner in = new Scanner(System.in);
-    //DRAW FIELD
-    public void game() {
-        for (int i = 0; i < 3; i++) {
-            System.out.println();
-            for (int j = 0; j < 3; j++) {
-                field[i][j]= "[]";
-                System.out.print(field[i][j]);
-            }
-        }
 
+    static char[][] field = new char[3][3];
+
+     static Scanner  s;
+
+    public static void main(String[] args) {
+
+        s = new Scanner(System.in);
+
+         char done;
+         done = ' ';
+
+          init_matrix();
+
+        do{
+
+
+            disp_matrix();
+
+            get_player_move();
+
+            done = check();
+
+            if(done != ' ') break;
+
+            get_computer_move();
+            if(done != ' ') break;
+
+        }while(done == ' ');
+
+        if(done == 'X') System.out.println("Поздравляем! Вы победили!");
+
+        else System.out.println("К сожалению, Вы проиграли!");
+
+        return;
 
     }
 
-   }
+   public static void init_matrix()
+    {
+        int i, j;
+
+       for(i = 0; i < 3; i++){
+
+            for(j = 0; j < 3; j++){
+
+              field[i][j] = ' ';
+
+            }
+
+        }
+    }
+
+
+    public static void disp_matrix()
+    {
+        int i;
+
+        for(i = 0; i < 3; i++){
+
+            StringBuilder sb = new StringBuilder();
+
+            sb.append(' ');
+            sb.append(field[i][0]);
+
+            sb.append(" |");
+            sb.append(' ');
+            sb.append(field[i][1]);
+            sb.append(" |");
+            sb.append(' ');
+            sb.append( field[i][2]);
+
+            System.out.println(sb.toString());
+
+            if(i != 2) System.out.println(" - | - | - ");
+        }
+
+        System.out.println();
+    }
+
+    public static void get_player_move()
+    {
+
+        int i, j;
+
+        System.out.println("Введите координаты x, y: ");
+
+        i = s.nextInt();
+        j = s.nextInt();
+
+        i--; j--;
+
+        if(field[i][j] != ' '){
+            System.out.println("Неверный ход. Попробуйте еще раз!\n");
+
+            get_player_move();
+        }
+
+        else field[i][j] = 'X';
+    }
+
+
+    public static void get_computer_move()
+    {
+
+        int i  = 0 , j = 0;
+
+        for(i = 0; i < 3; i++){
+
+            for(j = 0; j < 3; j++){
+
+                if(field[i][j] == ' ') break;
+            }
+
+            if(field[i][j] == ' ') break;
+        }
+
+        if(i*j == 9){
+            System.out.println("Ничья!");
+            System.exit(0);
+        }
+
+        else field[i][j] = 'O';
+    }
+
+
+    public static char check()
+    {
+        int i;
+
+        for(i = 0; i < 3; i++)
+
+            if(field[i][0] == field[i][1] &&
+
+                    field[i][0] == field[i][2])
+
+                return field [i][0];
+        for(i = 0; i < 3; i++)
+
+            if(field[0][i] == field[1][i] &&
+                    field[0][i] == field[2][i])
+
+                return field [0][i];
+
+        if(field[0][0] == field[1][1] &&
+                field[1][1] == field[2][2])
+
+            return field[0][0];
+
+        if(field[0][2] == field[1][1] &&
+                field[1][1] == field[2][0])
+
+            return field[0][2];
+
+        return ' ';
+    }
+}
+
+
+
+
+
+
+
+

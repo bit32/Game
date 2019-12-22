@@ -6,11 +6,12 @@ import java.util.Scanner;
 public class XO {
 
     static char[][] matrix = new char[3][3]; /* Игровое поле */
-    static Scanner s;
+     static Scanner  s;
 
     /* Наша главная функция :) */
-    public static void main(String[] argv)
-    {
+   public static void main(String[] args) {
+
+        
         s = new Scanner(System.in);
         char done;
 
@@ -38,15 +39,14 @@ public class XO {
         for(i = 0; i < 3; i++){
             for(j = 0; j < 3; j++){
                 matrix[i][j] = ' ';
-            }
+           }
         }
     }
 
     /* Вывести игровое поле на экран */
-    public static void disp_matrix()
-    {
+    public static void disp_matrix() {
         int i;
-        for(i = 0; i < 3; i++){
+        for (i = 0; i < 3; i++) {
             StringBuilder sb = new StringBuilder();
             sb.append(' ');
             sb.append(matrix[i][0]);
@@ -55,13 +55,12 @@ public class XO {
             sb.append(matrix[i][1]);
             sb.append(" |");
             sb.append(' ');
-            sb.append( matrix[i][2]);
+            sb.append(matrix[i][2]);
             System.out.println(sb.toString());
-            if(i != 2) System.out.println(" - | - | - ");
+            if (i != 2) System.out.println(" - | - | - ");
         }
         System.out.println();
     }
-
     /* Ход игрока */
     public static void get_player_move()
     {
@@ -84,7 +83,7 @@ public class XO {
     /* Ход компьютера */
     public static void get_computer_move()
     {
-        int i  =0 , j = 0;
+        int i  = 0 , j = 0;
 
         for(i = 0; i < 3; i++){
             for(j = 0; j < 3; j++){
